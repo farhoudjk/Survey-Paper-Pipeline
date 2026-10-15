@@ -1,0 +1,20 @@
+{
+  "dimensions": [
+    {"id": "d1", "name": "Technique", "description": "Main technique family.",
+     "categories": [
+       {"id": "offload", "name": "Expert offloading", "definition": "Keeps some experts outside GPU memory and loads them on demand."},
+       {"id": "parallel", "name": "Expert parallelism", "definition": "Places experts on several devices and routes tokens between them."}
+     ]},
+    {"id": "d2", "name": "System layer", "description": "Where the technique acts.",
+     "categories": [
+       {"id": "kernel", "name": "Kernel", "definition": "GPU kernels and operators."},
+       {"id": "runtime", "name": "Runtime", "definition": "Serving engine and memory management."}
+     ]}
+  ],
+  "primary_dimension": "d1",
+  "assignments": {"kwon2023efficient": {"d1": ["offload"], "d2": ["runtime"]}},
+  "gaps": [{"dimension": "d1", "category": "parallel", "kind": "search gap", "note": "Only 1 paper so far."}],
+  "gap_queries": [{"query": "expert parallel MoE serving all-to-all", "reason": "thin category d1/parallel"}],
+  "new_fields": [],
+  "changelog": ["v1: first build"]
+}

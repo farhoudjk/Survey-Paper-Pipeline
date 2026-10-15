@@ -1,0 +1,39 @@
+\documentclass[10pt,twocolumn]{article}
+% To use a venue template (ACM CSUR acmart, IEEE), replace these lines and keep the \input lines.
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{forest}
+\usepackage{caption}
+\usepackage{cite}  % sorted, compressed and line-breakable citations
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+\title{TODO: A Survey of ...}
+\author{Authors}
+\date{}
+
+\begin{document}
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/background}
+\input{sections/methodology}
+\input{sections/taxonomy}
+\input{sections/categories}
+\input{sections/analysis}
+\input{sections/challenges}
+\input{sections/conclusion}
+
+\bibliographystyle{plain}
+\bibliography{refs,background_refs}
+\end{document}

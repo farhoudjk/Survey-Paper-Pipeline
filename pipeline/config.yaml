@@ -1,0 +1,36 @@
+# new_project.py fills in the first block for each new survey.
+
+is_template: true          # true only in the template repo; the pipeline will not run here
+project_name: ""           # set by new_project.py
+github_owner: farhoudjk
+private_repos: true
+
+# Collection and screening
+max_collect_rounds: 4      # round 1 = keyword search, later rounds = snowballing
+saturation_threshold: 0.05 # stop when a round adds fewer than 5% new included papers
+max_snowball_seeds: 40     # papers used as snowball seeds per round
+snowball_limit: 40         # references / citations fetched per seed and direction
+screen_batch: 40           # papers per screener call
+max_papers_warning: 300    # print a warning above this many included papers
+
+# Extraction
+extract_batch: 6           # papers per extractor call
+parallel_agents: 3         # agent calls that run at the same time (screener, extractor)
+
+# Taxonomy and coverage
+min_per_category: 3        # thinner categories trigger a targeted search
+max_coverage_loops: 2
+
+# Writing and review
+max_citation_fixes: 2
+max_review_loops: 3
+
+# Optional GPU benchmark of open-source systems (needs gpu_watcher.py on a GPU machine)
+benchmark: false
+poll_seconds: 120
+gpu_wait_hours: 48
+
+# Claude Code run settings
+agent_max_turns: 300
+model: ""                  # empty = your default model; or opus / sonnet
+pause_at_checkpoints: true # false = fully automatic

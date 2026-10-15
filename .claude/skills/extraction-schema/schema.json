@@ -1,0 +1,32 @@
+{
+  "description": "One note per included paper: state/notes/<id>.json",
+  "required": ["id", "title", "year", "problem", "key_idea", "technique_family", "system_layer",
+               "evaluation", "main_results", "limitations", "source_text", "confidence"],
+  "fields": {
+    "id": "paper id from state/corpus.json (also the BibTeX key)",
+    "title": "paper title",
+    "year": "publication year",
+    "venue": "venue or arXiv",
+    "problem": "2 to 3 sentences: what problem the paper solves and why it matters",
+    "key_idea": "2 to 3 sentences: the main idea or insight",
+    "approach": "3 to 5 sentences: how the system or method works",
+    "technique_family": ["short reusable labels, e.g. expert offloading, expert prefetching, speculative decoding"],
+    "system_layer": ["one or more of: algorithm, model, kernel, runtime, scheduler, memory, compiler, cluster, hardware"],
+    "target_setting": "e.g. single GPU, multi-GPU, edge, serving cluster, training",
+    "evaluation": {
+      "hardware": ["e.g. 8x A100 80GB"],
+      "models": ["e.g. Mixtral-8x7B"],
+      "workloads": ["datasets or traces"],
+      "baselines": ["systems compared against"],
+      "metrics": ["e.g. throughput, TPOT, P99 latency, memory"]
+    },
+    "main_results": [{"claim": "e.g. 2.1x higher throughput than vLLM", "metric": "throughput",
+                      "value": "2.1x", "versus": "vLLM", "where": "Fig. 8 / Sec. 6.2"}],
+    "limitations": ["stated by the authors or clearly visible in the evaluation"],
+    "artifact": {"code_url": null, "open_source": false},
+    "relation_to_rqs": {"RQ1": "short answer or null"},
+    "extra": {"field added later by add-fields mode": "value"},
+    "source_text": "full or abstract",
+    "confidence": "high | medium | low"
+  }
+}

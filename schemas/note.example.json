@@ -1,0 +1,22 @@
+{
+  "id": "kwon2023efficient",
+  "title": "Example Paper Title",
+  "year": 2023,
+  "venue": "SOSP",
+  "problem": "Two to three sentences on the problem.",
+  "key_idea": "Two to three sentences on the main idea.",
+  "approach": "Three to five sentences on how it works.",
+  "technique_family": ["expert offloading", "prefetching"],
+  "system_layer": ["runtime", "memory"],
+  "target_setting": "single GPU",
+  "evaluation": {"hardware": ["1x A100 80GB"], "models": ["Mixtral-8x7B"], "workloads": ["ShareGPT"],
+                 "baselines": ["vLLM"], "metrics": ["throughput", "TPOT"]},
+  "main_results": [{"claim": "2.1x higher throughput than vLLM", "metric": "throughput", "value": "2.1x",
+                    "versus": "vLLM", "where": "Fig. 8, Sec. 6.2"}],
+  "limitations": ["Evaluated on one model only."],
+  "artifact": {"code_url": "https://github.com/example/example", "open_source": true},
+  "relation_to_rqs": {"RQ1": "Memory capacity", "RQ2": "Offloading at runtime layer"},
+  "extra": {"lossless": true},
+  "source_text": "full",
+  "confidence": "high"
+}

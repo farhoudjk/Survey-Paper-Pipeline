@@ -1,0 +1,30 @@
+{
+  "title": "A Survey of Mixture-of-Experts Inference Systems",
+  "scope": "System techniques that make MoE model inference faster, cheaper or fit in less memory. Training-only work is out.",
+  "research_questions": [
+    {"id": "RQ1", "question": "Which inference bottlenecks of MoE models do systems target?", "why": "Shows where effort goes."},
+    {"id": "RQ2", "question": "Which technique families are used, at which system layer?", "why": "Basis of the taxonomy."},
+    {"id": "RQ3", "question": "How are these systems evaluated, and how comparable are the results?", "why": "Evaluation practice."},
+    {"id": "RQ4", "question": "What open problems remain?", "why": "Future directions."}
+  ],
+  "inclusion": [
+    {"id": "I1", "rule": "Proposes or evaluates a system or algorithm for MoE model inference."},
+    {"id": "I2", "rule": "Has an experimental evaluation or a detailed system design."}
+  ],
+  "exclusion": [
+    {"id": "E1", "rule": "Only about MoE training or model architecture quality."},
+    {"id": "E2", "rule": "Not a research paper (tutorial, opinion, patent, thesis duplicate)."},
+    {"id": "E-dup", "rule": "Duplicate of an included paper (keep the published version)."}
+  ],
+  "year_from": 2021,
+  "venues_focus": ["OSDI", "SOSP", "EuroSys", "ASPLOS", "MLSys", "ATC", "SC", "ISCA", "MICRO", "NeurIPS", "ICML", "ICLR"],
+  "keywords_any": ["mixture of experts", "mixture-of-experts", "moe", "expert"],
+  "queries": [
+    {"id": "Q01", "query": "mixture of experts inference system", "concept": "core"},
+    {"id": "Q02", "query": "MoE expert offloading inference", "concept": "memory"},
+    {"id": "Q03", "query": "MoE expert parallelism serving", "concept": "distributed"}
+  ],
+  "seed_papers": [{"title": "Example seed title", "doi": null, "arxiv": null}],
+  "extraction_focus": ["Whether the method is lossless", "Expert placement (GPU, CPU, SSD)"],
+  "notes": "Assumptions and questions for the human."
+}

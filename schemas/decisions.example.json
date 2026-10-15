@@ -1,0 +1,6 @@
+{"decisions": [
+  {"id": "kwon2023efficient", "decision": "include", "stage": "title_abstract", "criterion": "I1",
+   "reason": "Proposes a runtime technique for MoE inference memory."},
+  {"id": "smith2024training", "decision": "exclude", "stage": "full_text", "criterion": "E1",
+   "reason": "Only about training; inference is not evaluated."}
+]}

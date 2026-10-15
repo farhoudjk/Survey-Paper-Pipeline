@@ -1,0 +1,10 @@
+{
+  "review": 1,
+  "decision": "revise",
+  "summary": "Two sentences on the survey and its main weakness.",
+  "scores": {"coverage": 3, "accuracy": 4, "taxonomy": 3, "synthesis": 3, "clarity": 4, "overall": 3},
+  "missing_papers": [{"title": "Real title returned by a search", "query": "short query that finds it", "why": "Central to the offloading category."}],
+  "fact_errors": [{"paper_id": "kwon2023efficient", "field": "main_results", "issue": "Speedup is 1.8x, not 2.1x.", "evidence": "Sec. 6.2, Fig. 8"}],
+  "presentation_issues": [{"id": "P1", "priority": "major", "location": "sections/cat_offload.tex", "issue": "Lists papers one by one.", "fix": "Group by idea and compare."}],
+  "fixed_from_previous": []
+}
